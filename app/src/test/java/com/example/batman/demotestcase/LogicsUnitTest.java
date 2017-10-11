@@ -16,12 +16,15 @@ import org.mockito.junit.MockitoJUnitRunner;
  */
 @RunWith(MockitoJUnitRunner.class)
 public class LogicsUnitTest {
+    //Mocking Context
     @Mock
     Context mockContext;
     @Test
     public void testThisMethodTest(){
+        //String will be null so we are returning own dummy String
         when(mockContext.getString(R.string.app_name))
                 .thenReturn("DemoTestCase");
+        //Checking both strings
        assertEquals("DemoTestCase",Logics.testThisMethod(mockContext));
     }
 }
